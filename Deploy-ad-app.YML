@@ -1,0 +1,33 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: none
+#- master
+# variables:
+#   - group: appregistration-var
+
+pool:
+  vmImage: windows-latest
+
+parameters:
+  - name: SubscriptionId
+    type: string
+    displayName: "ID of subscrition to deploy operation."
+    default: "989f76fd-5edb-4aa1-b014-f989e1918adc"
+ 
+  - name: Path
+    type: string
+    displayName: "Provide the manifest file path."
+    default: "Scripts/manifestdemo.json"
+  
+steps:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'MasterConnection'
+    scriptType: 'pscore'
+    scriptLocation: 'scriptPath'
+    scriptPath: 'scripts/aadappreg.ps1'
+    arguments: '-SubsciptionId ${{ parameters.SubscriptionId }} -Path ${{ parameters.Path }} '
+    addSpnToEnvironment: true 
