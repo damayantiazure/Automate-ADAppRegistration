@@ -113,7 +113,9 @@ $token = az account get-access-token --resource https://graph.microsoft.com | Co
 $accessToken = $token.accessToken
 $targetAPIPermission = (Get-Content $manifestfilepath | ConvertFrom-Json).requiredResourceAccess.resourceAccess
 
-#Iterating through the API Permissions with type "Role" and granting admin consent
+Write-Host "👉 Iterating through the API Permissions with type "Role" and granting admin consent"
+
+#Application permissions are used when the application calls the API as itself. 
 #Grant an appRoleAssignment to a service principal
 #App roles that are assigned to service principals are also known as application permissions.
 #Reference: https://learn.microsoft.com/en-us/graph/api/serviceprincipal-post-approleassignments?view=graph-rest-1.0&tabs=http
@@ -137,7 +139,9 @@ foreach($apipermission in $targetAPIPermission){
     }
 }
 
-#Iterating through the API Permissions with type "Scope" and granting admin consent
+Write-Host "👉 Iterating through the API Permissions with type "Scope" and granting admin consent"
+
+#Use delegated permissions when you want to call the Web API as the logged-on user. 
 #Create oAuth2PermissionGrant (a delegated permission grant)
 #A delegated permission grant authorizes a client service principal (representing a client application) to access a resource service principal (representing an API), on behalf of a signed-in user, for the level of access limited by the delegated permissions which were granted.
 # Reference: https://learn.microsoft.com/en-us/graph/api/oauth2permissiongrant-post?view=graph-rest-1.0&tabs=http
