@@ -1,0 +1,91 @@
+{
+	"id": "",
+	"acceptMappedClaims": null,
+	"accessTokenAcceptedVersion": 2,
+	"addIns": [],
+	"allowPublicClient": null,
+	"appId": "",
+	"appRoles": [
+		{
+			"allowedMemberTypes": [
+				"User"
+			],
+			"description": "Own the app",
+			"displayName": "Owner",
+			"id": "99c67bc1-ba22-44fb-9ca2-a068548eea91",
+			"isEnabled": true,
+			"value": "admin@MngEnv877982.onmicrosoft.com"
+		},
+		{
+			"allowedMemberTypes": [
+				"User"
+			],
+			"description": "Contributer",
+			"displayName": "Contributer",
+			"id": "e185ddab-45f6-479c-84a1-a30173f4e7cb",
+			"isEnabled": true,
+			"value": "dbhuyan@microsoft.com"
+		}
+	],
+	"oauth2AllowUrlPathMatching": false,
+	"createdDateTime": "",
+	"description": null,
+	"certification": null,
+	"disabledByMicrosoftStatus": null,
+	"groupMembershipClaims": null,
+	"identifierUris": [],
+	"informationalUrls": {
+		"termsOfService": null,
+		"support": null,
+		"privacy": null,
+		"marketing": null
+	},
+	"keyCredentials": [],
+	"knownClientApplications": [],
+	"logoUrl": null,
+	"logoutUrl": null,
+	"name": "vodaphone-demo",
+	"notes": null,
+	"oauth2AllowIdTokenImplicitFlow": false,
+	"oauth2AllowImplicitFlow": false,
+	"oauth2Permissions": [],
+	"oauth2RequirePostResponse": false,
+	"optionalClaims": null,
+	"orgRestrictions": [],
+	"parentalControlSettings": {
+		"countriesBlockedForMinors": [],
+		"legalAgeGroupRule": "Allow"
+	},
+	"passwordCredentials": [],
+	"preAuthorizedApplications": [],
+	"publisherDomain": "MngEnv877982.onmicrosoft.com",
+	"replyUrlsWithType": [
+		{
+			"url": "https://demoapp-adreg.azurewebsites.net",
+			"type": "Web"
+		}
+	],
+	"requiredResourceAccess": [
+		{
+			"resourceAppId": "00000003-0000-0000-c000-000000000000",
+			"resourceAccess": [
+				{
+					"id": "a154be20-db9c-4678-8ab7-66f6cc099a59",
+					"type": "Scope"
+				},
+				{
+					"id": "c79f8feb-a9db-4090-85f9-90d820caa0eb",
+					"type": "Scope"
+				},
+				{
+					"id": "1bfefb4e-e0b5-418b-a88f-73c46d2cc8e9",
+					"type": "Role"
+				}
+			]
+		}
+	],
+	"samlMetadataUrl": null,
+	"signInUrl": null,
+	"signInAudience": "AzureADandPersonalMicrosoftAccount",
+	"tags": [],
+	"tokenEncryptionKeyId": null
