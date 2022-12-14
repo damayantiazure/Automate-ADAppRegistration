@@ -58,6 +58,11 @@ az ad app permission grant --id $app.AppId --api 00000003-0000-0000-c000-0000000
 ![image](https://user-images.githubusercontent.com/92169356/207419057-9c8f8785-cec3-43ec-b95d-9112f5dd265f.png)
 
 4. Iterating through the API Permissions with type "Role" and granting admin consent
+
+- Application permissions are used when the application calls the API as itself. 
+(For example, to get the weather forecast for a certain zip code (it does not matter which user is logged on). The client can even call the API when there's no user present (some background service calling the API to update some status).)
+
+
 - Grant an appRoleAssignment to a service principal
 
 - App roles that are assigned to service principals are also known as application permissions.
@@ -68,6 +73,10 @@ az ad app permission grant --id $app.AppId --api 00000003-0000-0000-c000-0000000
 
 
 6. Iterating through the API Permissions with type "Scope" and granting admin consent
+
+- Use delegated permissions when you want to call the Web API as the logged-on user. 
+(For example, that the Web API needs to filter the data it returns based on who the user is or execute some action as the logged in user. Or even just to log which user was initiating the call.)
+
 - Create oAuth2PermissionGrant (a delegated permission grant)
 
 - Delegated permission grant authorizes a client service principal (representing a client application) to access a resource service principal (representing an API), on behalf of a signed-in user, for the level of access limited by the delegated permissions which were granted.
