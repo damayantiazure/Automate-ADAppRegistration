@@ -1,7 +1,7 @@
 # AAD App Registration Automation
-1.Automating AAD App Registration using DevOps pipeline
+1. Automating AAD App Registration using DevOps pipeline
 
-2.The pipeline will use the input file (JSON) with App details and create the AAD App on Azure AD with the inputs provided in the file. Ex: API Permissions, granting admin consent etc.
+2. The pipeline will use the input file (JSON) with App details and create the AAD App on Azure AD with the inputs provided in the file. Ex: API Permissions, granting admin consent etc.
 
 3. Using Azure CLI and DevOps YML pipeline
 
